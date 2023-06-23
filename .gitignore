@@ -1,3 +1,6 @@
 venv/
 .idea/
 *.pyc
+deploy_tools/supervisord.log
+deploy_tools/supervisord.pid
+*.sock
