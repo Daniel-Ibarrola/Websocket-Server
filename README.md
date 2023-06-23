@@ -4,6 +4,14 @@ A sample websocket server and client.
 
 ## Deploying a websocket server
 
+## Installing the virtual environment and dependencies
+
+```shell
+python3.11 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
 ### Using supervisor to run the server
 
 Update the file in `deploy_tools/supervisord.conf` with the corresponding paths.
@@ -41,8 +49,8 @@ the necessary permissions.
 Check nginx logs:
 
 ```shell
-less /var/www/error.log
-less /var/www/access.log
+less /var/log/nginx/error.log
+less /var/log/nginx/access.log
 ```
 
 If there is a permission denied in the logs. Change the user of nginx in `/etc/nginx/nginx.conf`
