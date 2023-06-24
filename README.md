@@ -53,5 +53,13 @@ less /var/log/nginx/error.log
 less /var/log/nginx/access.log
 ```
 
-If there is a permission denied in the logs. Change the user of nginx in `/etc/nginx/nginx.conf`
+If there is a permission denied in the logs. Change the ownership of the folder
+where the websocket server is installed, and assign permissions to nginx group. 
+Nginx group can be named www-data or nginx, check name in `/etc/nginx/nginx.conf` file. Example:
+
+
+```shell
+sudo chown -R daniel:www-data Websocket-Server
+sudo chmod g+x Websocket-Server
+```
 
